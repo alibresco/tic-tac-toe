@@ -89,21 +89,3 @@ class Board(val board: Array<Array<Tile>>) {
            " ${board[2][0]} | ${board[2][1]} | ${board[2][2]} "
   }
 }
-
-fun main(args: Array<String>) {
-  var b = Board().add(Index.of(0, 0), Tile.X)
-      .add(Index.of(1, 1), Tile.O)
-  println(b)
-  println(b.isWin(Tile.X))
-  b = b.add(Index.of(0, 1), Tile.X)
-      .add(Index.of(0, 2), Tile.X)
-  println(b)
-  println(b.isWin(Tile.X))
-  println(b.isFull())
-  b = b.add(Index.of(1, 0), Tile.X)
-      .add(Index.of(1, 2), Tile.X)
-      .add(Index.of(2, 0), Tile.X)
-      .add(Index.of(2, 1), Tile.X)
-      .add(Index.of(2, 2), Tile.X)
-  println(b.isFull())
-}
